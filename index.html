@@ -215,6 +215,16 @@
     chatbotWindow.style.display = chatbotWindow.style.display === 'flex' ? 'none' : 'flex';
   };
 
+  function showHome() {
+    chatBody.innerHTML = `
+      <div class="chat-response">Hi there! 👋 I’m here to help you with all your school and private transport needs. You can view transport details, see our vehicle gallery, or book a taxi for school or trips. How can I assist you today?</div>
+      <div class="chat-option" onclick="showInfo()">View School Transport Info</div>
+      <div class="chat-option" onclick="showGallery()">Vehicle Gallery</div>
+      <div class="chat-option" onclick="showBooking()">Book a Ride</div>
+      <div class="chat-option" onclick="showContact()">Contact Us</div>
+    `;
+  }
+
   function showInfo() {
     chatBody.innerHTML = `
       <div class="chat-response">We provide safe and reliable transport for students from home to school and back. Here are our routes and schedules:</div>
@@ -222,17 +232,24 @@
       <div class="chat-response">Route 2: Home B → School → Home B</div>
       <div class="chat-response">Route 3: Home C → School → Home C</div>
       <div class="chat-response">If you want detailed timings for your area, click ‘Book a Ride’ or contact us.</div>
+      <div class="chat-option" onclick="showHome()">⬅️ Back</div>
     `;
   }
 
   function showGallery() {
     chatBody.innerHTML = `
-      <div class="chat-response">Take a look at the vehicles your child will be traveling in or choose one for your private trip:</div>
-      <div class="gallery">
-        <img src="https://www.alamy.com/stock-photo-school-bus-on-an-educational-visit-cape-town-south-africa-89925742.html" alt="School Bus">
-        <img src="https://rubixtransfers.co.za/scholar-transport/" alt="Rubix Shuttle">
-        <img src="https://www.news24.com/life/motoring/news/4-affordable-vehicles-you-can-buy-to-start-a-school-or-college-transport-business-in-2022-20220110" alt="Affordable Transport">
+      <div class="chat-response">
+        Take a look at the vehicles your child will be traveling in or choose one for your private trip:
       </div>
+      <div class="gallery">
+        <img src="img/WhatsApp Image 2025-09-06 at 21.23.21.jpeg" alt="School Taxi">
+        <img src="img/WhatsApp Image 2025-09-06 at 21.23.22.jpeg" alt="School Taxi">
+        <img src="img/WhatsApp Image 2025-09-06 at 21.23.23.jpeg" alt="School Taxi">
+        <img src="img/uu.jpeg" alt="School Taxi">
+        <img src="img/y.jpeg" alt="School Taxi">
+        <img src="img/rr.jpeg" alt="School Taxi">
+      </div>
+      <div class="chat-option" onclick="showHome()">⬅️ Back</div>
     `;
   }
 
@@ -250,12 +267,16 @@
         <button type="submit">Submit Booking</button>
       </form>
       <div class="chat-response">Or call us directly at <strong>083 341 7466</strong></div>
+      <div class="chat-option" onclick="showHome()">⬅️ Back</div>
     `;
   }
 
   function submitBooking(e) {
     e.preventDefault();
-    chatBody.innerHTML = `<div class="chat-response">✅ Thank you! Your booking has been submitted. We’ll confirm via email or WhatsApp shortly.</div>`;
+    chatBody.innerHTML = `
+      <div class="chat-response">✅ Thank you! Your booking has been submitted. We’ll confirm via email or WhatsApp shortly.</div>
+      <div class="chat-option" onclick="showHome()">⬅️ Back</div>
+    `;
   }
 
   function showContact() {
@@ -264,8 +285,12 @@
       <div class="chat-response">📞 Call: <strong>083 341 7466</strong></div>
       <div class="chat-response">📧 Email: <strong>info@gmail.com</strong></div>
       <div class="chat-response">💬 WhatsApp: <a href="https://wa.me/27833417466" target="_blank">Chat Now</a></div>
+      <div class="chat-option" onclick="showHome()">⬅️ Back</div>
     `;
   }
+
+  // Load home screen on page load
+  showHome();
 </script>
 
 </body>
@@ -479,75 +504,6 @@
 </div>
 </section>
 
-<section id="testim">
-<div class="container">
- <div class="row">
-  <div class="feature_1 text-center clearfix">
-    <div class="col-sm-12">
-	  <h4 class="mgt col">TRUSTED BY THOUSANDS</h4>
-	  <hr class="hr_2">
-	  <p class="col">Satisfied Customer Feedback</p>
-	</div>
-   </div>
-  <div class="testim_1 clearfix">
-   <div class="col-sm-6">
-    <div class="testim_1l clearfix">
-	  <div class="testim_1l1 clearfix">
-	   <blockquote>
-	    <h4 class="mgt">SEMP PORT</h4>
-		<p>Lorem ipsum Consequat ut dolor Duis ut minim eiusmod reprehenderit proident. Lorem ipsum Duis ut sunt nisi fugiat incididunt Duis ea adipisicing dolor nulla sint et.</p>
-	   </blockquote>
-	  </div>
-	  <div class="testim_1l2 clearfix">
-	    <img src="img/4.jpg" width="100" height="100" alt="abc">
-	  </div>
-	</div>
-   </div>
-   <div class="col-sm-6">
-    <div class="testim_1l clearfix">
-	  <div class="testim_1l1 clearfix">
-	   <blockquote>
-	    <h4 class="mgt">NULLA QUIS</h4>
-		<p>Lorem ipsum Consequat ut dolor Duis ut minim eiusmod reprehenderit proident. Lorem ipsum Duis ut sunt nisi fugiat incididunt Duis ea adipisicing dolor nulla sint et.</p>
-	   </blockquote>
-	  </div>
-	  <div class="testim_1l2 clearfix">
-	    <img src="img/5.jpg" width="100" height="100" alt="abc">
-	  </div>
-	</div>
-   </div>
-  </div>
-  <div class="testim_1 clearfix">
-   <div class="col-sm-6">
-    <div class="testim_1l clearfix">
-	  <div class="testim_1l1 clearfix">
-	   <blockquote>
-	    <h4 class="mgt">DAPIBUS DIAM</h4>
-		<p>Lorem ipsum Consequat ut dolor Duis ut minim eiusmod reprehenderit proident. Lorem ipsum Duis ut sunt nisi fugiat incididunt Duis ea adipisicing dolor nulla sint et.</p>
-	   </blockquote>
-	  </div>
-	  <div class="testim_1l2 clearfix">
-	    <img src="img/6.jpg" width="100" height="100" alt="abc">
-	  </div>
-	</div>
-   </div>
-   <div class="col-sm-6">
-    <div class="testim_1l clearfix">
-	  <div class="testim_1l1 clearfix">
-	   <blockquote>
-	    <h4 class="mgt">EGET NULLA</h4>
-		<p>Lorem ipsum Consequat ut dolor Duis ut minim eiusmod reprehenderit proident. Lorem ipsum Duis ut sunt nisi fugiat incididunt Duis ea adipisicing dolor nulla sint et.</p>
-	   </blockquote>
-	  </div>
-	  <div class="testim_1l2 clearfix">
-	    <img src="img/7.jpg" width="100" height="100" alt="abc">
-	  </div>
-	</div>
-   </div>
-  </div>
- </div>
-</div>
-</section>
 
 <section id="pricing">
 <div class="container">
